@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	JSON
 " Maintainer:	Eli Parra <eli@elzr.com> https://github.com/elzr/vim-json
-" Last Change:	2014-12-20 Load ftplugin/json.vim
+" Last Change:	2018-09-05T13:34:38+0900.vim
 
 " Reload the definition of g:vim_json_syntax_conceal
 " see https://github.com/elzr/vim-json/issues/42
@@ -62,7 +62,7 @@ if (!exists("g:vim_json_warnings") || g:vim_json_warnings==1)
 
 	" Syntax: No comments in JSON, see http://stackoverflow.com/questions/244777/can-i-comment-a-json-file
 	syn match   jsonCommentError  "//.*"
-	syn match   jsonCommentError  "\/\*\(\*\(\/\)\@!\|\_[^*]\)*\*\/" contains=NONE
+	syn match   jsonCommentError  "\/\*\(\*\(\/\)\@!\|\_[^*]\)*\*\/" contains=TOP,jsonNoQuotesError
 
 	" Syntax: No semicolons in JSON
 	syn match   jsonSemicolonError  ";"
