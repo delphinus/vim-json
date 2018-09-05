@@ -62,7 +62,7 @@ if (!exists("g:vim_json_warnings") || g:vim_json_warnings==1)
 
 	" Syntax: No comments in JSON, see http://stackoverflow.com/questions/244777/can-i-comment-a-json-file
 	syn match   jsonCommentError  "//.*"
-	syn match   jsonCommentError  "\/\*\(\*\(\/\)\@!\|\_[^*]\)*\*\/"
+	syn match   jsonCommentError  "\/\*\(\*\(\/\)\@!\|\_[^*]\)*\*\/" contains=NONE
 
 	" Syntax: No semicolons in JSON
 	syn match   jsonSemicolonError  ";"
